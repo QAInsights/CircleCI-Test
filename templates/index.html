@@ -1,0 +1,36 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Date and Time</title>
+    </head>
+    <body>
+
+        <div align="center">
+            <p>Click Submit to get current date and time: </p>
+            <button id="submit" onclick="func()">Submit</button>
+        </div>
+        <div align="center">
+            <p id="date">
+                <script>var date = new Date();
+document.getElementById("date").innerHTML=date.toDateString();</script>
+            </p>
+        </div>
+        <div align="center">
+            <p id="time">
+                <script>var date = new Date();
+document.getElementById("time").innerHTML=date.toLocaleTimeString();</script>
+            </p>
+        </div>
+    </body>
+</html>
+       <script>
+            function func() {
+                var date = new Date();
+                var dateText = date.toDateString();
+                var timeText = date.toLocaleTimeString();
+                document.getElementById("date").innerHTML = dateText;
+                document.getElementById("time").innerHTML = timeText;
+            }
+        </script>
+</html>
