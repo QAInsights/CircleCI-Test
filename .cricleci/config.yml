@@ -1,5 +1,6 @@
 orbs:
   docker: circleci/docker@1.6.0
+  tester: thekevjames/tester@2.0.0
 
 version: 2.1
 jobs:
@@ -23,3 +24,6 @@ workflows:
   example-workflow:
     jobs:
       - example-job
+      - tester/pytest:
+          args: --driver Firefox
+          install_args: pytest
