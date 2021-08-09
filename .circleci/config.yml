@@ -1,6 +1,7 @@
 orbs:
   docker: circleci/docker@1.6.0
   tester: talkiq/tester@3.0.1
+  heroku: circleci/heroku@1.2.6
 
   # Added tester
 
@@ -26,6 +27,9 @@ jobs:
 workflows:
   example-workflow:
     jobs:
-      - example-job 
+      - example-job
+      - heroku/deploy-via-git:
+            api-key: HEROKU_API_KEY 
+            app-name: HEROKU_APP_NAME
 
 
