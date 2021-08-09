@@ -1,6 +1,7 @@
 orbs:
   docker: circleci/docker@1.6.0
-  tester: thekevjames/tester@2.0.0
+  tester: talkiq/tester@3.0.1
+
   # Added tester
 
 version: 2.1
@@ -27,4 +28,5 @@ workflows:
       - example-job 
       - tester/pytest:
           args: --driver Firefox 
+          enable_caching: false
           install_args: pytest 
