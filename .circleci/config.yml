@@ -26,4 +26,4 @@ workflows:
       - example-job 
       - tester/pytest:
           args: --driver Firefox 
-          install_args: pytest
+          install_args: pytest 
