@@ -1,6 +1,7 @@
 orbs:
   docker: circleci/docker@1.6.0
   tester: thekevjames/tester@2.0.0
+  # Added tester
 
 version: 2.1
 jobs:
